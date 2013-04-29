@@ -1,0 +1,15 @@
+---
+blueprint:
+  name: "Angular Phone Catalog"
+  description: "This application takes the developer through the process of building a web-application using angular. The application is loosely based on Google phone gallery. Each commit is a separate lesson teaching a single aspect of angular. This version shows how to run a simple node app on Cloud Foundry and has been modified to serve the app/ directory only."
+  imageURL: "https://raw.github.com/angular/angular.js/master/images/logo/AngularJS-Shield.exports/AngularJS-Shield-small.png"
+  browseURL: "https://github.com/cloudfoundry-blueprints/angular-phonecat"
+  buildInstructions: "node scripts/web-server.js"
+applications:
+- name: angular-phonecat
+  framework: node
+  runtime: node08
+  memory: 64M
+  instances: 1
+  url: angular-phonecat.${target-base}
+  path: .
